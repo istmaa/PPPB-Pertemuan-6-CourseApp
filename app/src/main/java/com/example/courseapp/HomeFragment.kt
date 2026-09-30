@@ -25,11 +25,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnContinueLearning.setOnClickListener {
-            requireActivity().findViewById<ViewPager2>(R.id.viewPager)?.currentItem = 1
-        }
-
-        binding.cardNavMateri.setOnClickListener {
+        binding.cardHeroCourse.setOnClickListener {
             requireActivity().findViewById<ViewPager2>(R.id.viewPager)?.currentItem = 1
         }
 

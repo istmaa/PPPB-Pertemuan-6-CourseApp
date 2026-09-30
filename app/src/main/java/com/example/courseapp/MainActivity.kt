@@ -1,6 +1,8 @@
 package com.example.courseapp
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.topAppBar)
 
         val adapter = SectionsPagerAdapter(this)
         binding.viewPager.adapter = adapter
@@ -44,5 +47,26 @@ class MainActivity : AppCompatActivity() {
             binding.tabLayout.setPadding(0, 0, 0, systemBars.bottom)
             insets
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.menu_home -> {
+            binding.viewPager.currentItem = 0
+            true
+        }
+        R.id.menu_materi -> {
+            binding.viewPager.currentItem = 1
+            true
+        }
+        R.id.menu_quiz -> {
+            binding.viewPager.currentItem = 2
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 }

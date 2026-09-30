@@ -18,23 +18,9 @@
         android:clipToPadding="false">
 
         <TextView
-            android:id="@+id/tvCourseBadge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_badge_unavailable"
-            android:paddingStart="@dimen/space_12"
-            android:paddingTop="@dimen/space_4"
-            android:paddingEnd="@dimen/space_12"
-            android:paddingBottom="@dimen/space_4"
-            android:text="@string/home_class_badge"
-            android:textAppearance="@style/TextAppearance.CourseApp.Label"
-            android:letterSpacing="0.08" />
-
-        <TextView
             android:id="@+id/tvHomeCourseTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_12"
             android:text="@string/home_course_title"
             android:textAppearance="@style/TextAppearance.CourseApp.ScreenTitle"
             android:lineSpacingExtra="3dp" />
@@ -49,13 +35,24 @@
             android:textColor="@color/secondary_text"
             android:lineSpacingExtra="4dp" />
 
+        <ImageView
+            android:id="@+id/ivHomeCourse"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginTop="@dimen/space_20"
+            android:contentDescription="@string/home_course_placeholder_alt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_course" />
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardHeroCourse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_20"
-            style="@style/Widget.CourseApp.FeatureCard"
-            app:cardBackgroundColor="@color/surface_tinted">
+            android:layout_marginTop="@dimen/space_16"
+            android:clickable="true"
+            android:focusable="true"
+            style="@style/Widget.CourseApp.Card"
+            app:cardBackgroundColor="@color/surface">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,97 +102,6 @@
                             android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
                     </LinearLayout>
                 </LinearLayout>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnContinueLearning"
-                    style="@style/CustomRoundedButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_16"
-                    android:text="@string/home_continue_learning" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <TextView
-            android:id="@+id/tvSectionNavTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_24"
-            android:text="@string/home_section_nav_title"
-            android:textAppearance="@style/TextAppearance.CourseApp.SectionTitle" />
-
-        <TextView
-            android:id="@+id/tvSectionNavDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_4"
-            android:text="@string/home_section_nav_desc"
-            android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardNavMateri"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_12"
-            android:clickable="true"
-            android:focusable="true"
-            style="@style/Widget.CourseApp.Card"
-            app:strokeColor="@color/accent_materi_border"
-            app:strokeWidth="1dp"
-            app:cardBackgroundColor="@color/accent_materi_bg">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="@dimen/space_16">
-
-                <FrameLayout
-                    android:layout_width="@dimen/icon_container_size"
-                    android:layout_height="@dimen/icon_container_size"
-                    android:background="@drawable/bg_number_badge">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_materi"
-                        app:tint="@color/primary"
-                        android:contentDescription="@null" />
-                </FrameLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="@dimen/space_12"
-                    android:layout_marginEnd="@dimen/space_8"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_nav_materi_title"
-                        android:textAppearance="@style/TextAppearance.CourseApp.CardTitle" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/space_4"
-                        android:text="@string/home_nav_materi_desc"
-                        android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:tint="@color/primary"
-                    android:contentDescription="@null" />
 
             </LinearLayout>
 
@@ -257,50 +163,9 @@
 
                 </LinearLayout>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:tint="@color/secondary"
-                    android:contentDescription="@null" />
-
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/space_32"
-            android:background="@color/border_subtle" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/space_16"
-            android:layout_marginBottom="@dimen/space_24">
-
-            <TextView
-                android:id="@+id/tvFooterBrand"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/home_footer_brand"
-                android:textAppearance="@style/TextAppearance.CourseApp.Supporting"
-                android:textStyle="bold"
-                android:letterSpacing="0.02" />
-
-            <TextView
-                android:id="@+id/tvFooterSub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_4"
-                android:text="@string/home_footer_sub"
-                android:textAppearance="@style/TextAppearance.CourseApp.Label"
-                android:textColor="@color/muted_text" />
-
-        </LinearLayout>
 
     </LinearLayout>
 

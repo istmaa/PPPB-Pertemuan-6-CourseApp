@@ -25,7 +25,7 @@ class QuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cardQuizLocked.setOnClickListener {
+        binding.btnStartQuiz.setOnClickListener {
             Snackbar.make(
                 binding.root,
                 getString(R.string.quiz_locked_notice),

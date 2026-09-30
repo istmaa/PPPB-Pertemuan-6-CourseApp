@@ -16,6 +16,7 @@ class DetailMateriActivity : AppCompatActivity() {
         const val EXTRA_CONCEPTS = "extra_concepts"
         const val EXTRA_PRACTICE = "extra_practice"
         const val EXTRA_SUMMARY = "extra_summary"
+        const val EXTRA_IMAGE_RES = "extra_image_res"
     }
 
     private lateinit var binding: ActivityDetailMateriBinding
@@ -32,6 +33,7 @@ class DetailMateriActivity : AppCompatActivity() {
         val concepts = intent.getStringArrayListExtra(EXTRA_CONCEPTS) ?: arrayListOf()
         val practice = intent.getStringExtra(EXTRA_PRACTICE) ?: ""
         val summary = intent.getStringExtra(EXTRA_SUMMARY) ?: ""
+        val imageResId = intent.getIntExtra(EXTRA_IMAGE_RES, 0)
 
         binding.topAppBarDetail.title = "${getString(R.string.detail_module_prefix)} $number"
         binding.topAppBarDetail.setNavigationOnClickListener {
@@ -43,6 +45,9 @@ class DetailMateriActivity : AppCompatActivity() {
         binding.tvDetailOverview.text = overview
         binding.tvDetailPractice.text = practice
         binding.tvDetailSummary.text = summary
+        if (imageResId != 0) {
+            binding.ivDetailImage.setImageResource(imageResId)
+        }
 
         val formattedConcepts = concepts.joinToString(separator = "\n\n") { "• $it" }
         binding.tvDetailConcepts.text = formattedConcepts

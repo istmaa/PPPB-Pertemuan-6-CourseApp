@@ -72,11 +72,20 @@
                 android:text="Judul Materi"
                 android:textAppearance="@style/TextAppearance.CourseApp.ScreenTitle" />
 
+            <ImageView
+                android:id="@+id/ivDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="@dimen/space_16"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/android_studio" />
+
             <!-- Overview Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_20"
                 style="@style/Widget.CourseApp.Card">
 
                 <LinearLayout

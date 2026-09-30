@@ -36,6 +36,7 @@ class MateriAdapter(private val materiList: List<Materi>) :
                 putStringArrayListExtra(DetailMateriActivity.EXTRA_CONCEPTS, ArrayList(item.concepts))
                 putExtra(DetailMateriActivity.EXTRA_PRACTICE, item.practice)
                 putExtra(DetailMateriActivity.EXTRA_SUMMARY, item.summary)
+                putExtra(DetailMateriActivity.EXTRA_IMAGE_RES, item.imageResId)
             }
             context.startActivity(intent)
         }

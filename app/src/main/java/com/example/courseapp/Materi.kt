@@ -9,5 +9,6 @@ data class Materi(
     val overview: String,
     val concepts: List<String>,
     val practice: String,
-    val summary: String
+    val summary: String,
+    val imageResId: Int
 ) : Serializable
