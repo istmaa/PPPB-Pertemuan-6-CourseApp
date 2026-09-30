@@ -8,6 +8,8 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/surface</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <item name="actionOverflowMenuStyle">@style/Widget.CourseApp.PopupMenu.Overflow</item>
+        <item name="android:actionOverflowMenuStyle">@style/Widget.CourseApp.PopupMenu.Overflow</item>
     </style>
 
     <style name="Theme.CourseApp" parent="Base.Theme.CourseApp" />

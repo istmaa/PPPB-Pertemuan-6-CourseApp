@@ -26,11 +26,12 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnStartQuiz.setOnClickListener {
+            val tabLayout = requireActivity().findViewById<View>(R.id.tabLayout)
             Snackbar.make(
                 binding.root,
                 getString(R.string.quiz_locked_notice),
                 Snackbar.LENGTH_LONG
-            ).show()
+            ).setAnchorView(tabLayout).show()
         }
     }
 
