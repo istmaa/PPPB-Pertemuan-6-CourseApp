@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/page_padding_horizontal"
+        android:paddingTop="@dimen/page_padding_vertical"
+        android:paddingEnd="@dimen/page_padding_horizontal"
+        android:paddingBottom="@dimen/space_24"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/tvQuizHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_header_title"
+            android:textAppearance="@style/TextAppearance.CourseApp.ScreenTitle" />
+
+        <TextView
+            android:id="@+id/tvQuizHeaderSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/quiz_header_subtitle"
+            android:textAppearance="@style/TextAppearance.CourseApp.Body"
+            android:textColor="@color/secondary_text"
+            android:lineSpacingExtra="3dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardQuizHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            style="@style/Widget.CourseApp.FeatureCard"
+            app:cardBackgroundColor="@color/surface_tinted">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/icon_container_size"
+                        android:layout_height="@dimen/icon_container_size"
+                        android:background="@drawable/bg_badge_locked">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_lock"
+                            app:tint="@color/badge_locked_text" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_12"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quiz_status_title"
+                            android:textAppearance="@style/TextAppearance.CourseApp.CardTitle" />
+
+                        <TextView
+                            android:id="@+id/tvQuizCardMeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:text="@string/quiz_status_description"
+                            android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvQuizSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/quiz_section_title"
+            android:textAppearance="@style/TextAppearance.CourseApp.SectionTitle" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardQuizLocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_12"
+            android:clickable="true"
+            android:focusable="true"
+            style="@style/Widget.CourseApp.Card"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/icon_container_size"
+                        android:layout_height="@dimen/icon_container_size"
+                        android:background="@drawable/bg_badge_locked">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_lock"
+                            app:tint="@color/badge_locked_text"
+                            android:contentDescription="@null" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/space_12"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quiz_card_title"
+                            android:textAppearance="@style/TextAppearance.CourseApp.CardTitle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_4"
+                            android:text="@string/quiz_card_desc"
+                            android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvQuizBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge_locked"
+                        android:paddingStart="@dimen/space_8"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="@dimen/space_8"
+                        android:paddingBottom="4dp"
+                        android:text="@string/quiz_badge_locked"
+                        android:textAppearance="@style/TextAppearance.CourseApp.Label"
+                        android:textColor="@color/badge_locked_text"
+                        android:letterSpacing="0.04" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:layout_marginBottom="@dimen/space_12"
+                    android:background="@color/border_subtle" />
+
+                <TextView
+                    android:id="@+id/tvQuizCardInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quiz_card_info"
+                    android:textAppearance="@style/TextAppearance.CourseApp.Supporting"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

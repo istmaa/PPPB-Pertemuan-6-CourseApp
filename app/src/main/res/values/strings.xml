@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">Course App</string>
+
+    <!-- Navigation Tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_materi">Materi</string>
+    <string name="tab_quiz">Quiz</string>
+
+    <!-- Home Page -->
+    <string name="home_class_badge">MODUL PRAKTIKUM</string>
+    <string name="home_course_title">Praktikum Pemrograman Perangkat Bergerak Dasar</string>
+    <string name="home_course_desc">Pelajari dasar pengembangan aplikasi Android berbasis Kotlin melalui rangkaian modul dan praktikum yang telah diberikan.</string>
+    <string name="home_meta_topics">6 Modul Materi • Kotlin • XML Layout</string>
+    <string name="home_progress_title">Siap untuk mulai belajar</string>
+    <string name="home_continue_learning">Mulai belajar</string>
+    <string name="home_section_nav_title">Mulai Belajar</string>
+    <string name="home_section_nav_desc">Pilih bagian yang ingin kamu akses</string>
+    <string name="home_nav_materi_title">Materi</string>
+    <string name="home_nav_materi_desc">Pelajari materi praktikum</string>
+    <string name="home_nav_quiz_title">Quiz</string>
+    <string name="home_nav_quiz_desc">Uji pemahamanmu</string>
+    <string name="home_footer_brand">Course App</string>
+    <string name="home_footer_sub">Praktikum Pemrograman Perangkat Bergerak Dasar</string>
+    <string name="home_course_placeholder_alt">Ilustrasi Praktikum Android</string>
+
+    <!-- Materi Page -->
+    <string name="materi_title">Materi</string>
+    <string name="materi_subtitle">Materi yang telah dipelajari selama praktikum.</string>
+    <string name="materi_module_count">6 modul pembelajaran</string>
+    
+    <string name="materi_01_num">01</string>
+    <string name="materi_01_title">Android Studio</string>
+    <string name="materi_01_desc">Pengenalan lingkungan pengembangan aplikasi Android</string>
+
+    <string name="materi_02_num">02</string>
+    <string name="materi_02_title">Linear Layout</string>
+    <string name="materi_02_desc">Menyusun komponen UI secara vertikal dan horizontal</string>
+
+    <string name="materi_03_num">03</string>
+    <string name="materi_03_title">Relative &amp; Constraint Layout</string>
+    <string name="materi_03_desc">Mengatur posisi komponen secara fleksibel</string>
+
+    <string name="materi_04_num">04</string>
+    <string name="materi_04_title">Activity &amp; Intent</string>
+    <string name="materi_04_desc">Mengatur halaman dan perpindahan antar Activity</string>
+
+    <string name="materi_05_num">05</string>
+    <string name="materi_05_title">UI Component</string>
+    <string name="materi_05_desc">Mengenal komponen antarmuka dalam aplikasi Android</string>
+
+    <string name="materi_06_num">06</string>
+    <string name="materi_06_title">Style, Option Menu, Tabs Layout</string>
+    <string name="materi_06_desc">Menerapkan style, menu, fragment, dan tab navigation</string>
+
+    <string name="action_open_materi">Buka detail materi</string>
+
+    <!-- Detail Materi Page -->
+    <string name="detail_module_prefix">Modul</string>
+    <string name="detail_section_overview">Gambaran Umum</string>
+    <string name="detail_section_concepts">Konsep &amp; Pembahasan Utama</string>
+    <string name="detail_section_practice">Penerapan Praktikum</string>
+    <string name="detail_section_summary">Rangkuman Praktikum</string>
+    <string name="detail_btn_back">Kembali ke Daftar Materi</string>
+
+    <!-- Quiz Page -->
+    <string name="quiz_header_title">Quiz Praktikum</string>
+    <string name="quiz_header_subtitle">Uji pemahamanmu setelah mempelajari materi.</string>
+    <string name="quiz_status_title">Quiz akan segera tersedia</string>
+    <string name="quiz_status_description">Selesaikan materi untuk mempersiapkan evaluasi.</string>
+    <string name="quiz_section_title">Evaluasi Pembelajaran</string>
+    <string name="quiz_card_title">Evaluasi Pemahaman Materi</string>
+    <string name="quiz_card_desc">10 Soal Pilihan Ganda • Praktikum PPB Dasar</string>
+    <string name="quiz_badge_locked">BELUM TERSEDIA</string>
+    <string name="quiz_card_info">Quiz saat ini belum dibuka untuk course ini. Silakan selesaikan seluruh materi praktikum terlebih dahulu.</string>
+    <string name="quiz_locked_notice">Quiz belum dapat dikerjakan. Belum ada quiz yang tersedia untuk saat ini.</string>
+    <string name="quiz_placeholder_alt">Ilustrasi Evaluasi Quiz</string>
 </resources>

@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Academic learning palette -->
+    <color name="background">#F7F7FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_tinted">#F8F7FF</color>
+    <color name="primary">#5B45C7</color>
+    <color name="primary_dark">#4633A6</color>
+    <color name="primary_light">#EEEAFE</color>
+    <color name="secondary">#7766D6</color>
+
+    <!-- Text Colors -->
+    <color name="primary_text">#20202A</color>
+    <color name="secondary_text">#626270</color>
+    <color name="muted_text">#797987</color>
+
+    <!-- Structural Borders & Dividers -->
+    <color name="border">#E3E1EA</color>
+    <color name="border_subtle">#ECEAF1</color>
+
+    <!-- Category / Card Accents -->
+    <color name="accent_materi_bg">#F5F2FF</color>
+    <color name="accent_materi_border">#DED7FA</color>
+    <color name="accent_materi_icon_bg">#E9E3FF</color>
+    
+    <color name="accent_quiz_bg">#F9F8FC</color>
+    <color name="accent_quiz_border">#E5E1EF</color>
+    <color name="accent_quiz_icon_bg">#EEEAFE</color>
+
+    <color name="badge_locked_bg">#F2F0F7</color>
+    <color name="badge_locked_text">#625C72</color>
+    <color name="badge_locked_border">#DDD8E7</color>
+
+    <color name="badge_bg">#EEEAFE</color>
+    <color name="badge_text">#5B45C7</color>
+    <color name="number_badge_bg">#EEEAFE</color>
+    <color name="number_badge_text">#5B45C7</color>
+
+    <!-- Placeholder Assets -->
+    <color name="placeholder_bg">#F4F3FA</color>
+    <color name="placeholder_border">#DAD7E8</color>
+    <color name="placeholder_icon">#8C87A6</color>
 </resources>

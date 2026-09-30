@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="72dp"
+    android:layout_marginBottom="@dimen/space_12"
+    android:clickable="true"
+    android:focusable="true"
+    style="@style/Widget.CourseApp.Card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_16">
+
+        <TextView
+            android:id="@+id/tvMateriNumber"
+            android:layout_width="@dimen/icon_container_size"
+            android:layout_height="@dimen/icon_container_size"
+            android:background="@drawable/bg_number_badge"
+            android:gravity="center"
+            android:text="01"
+            android:textColor="@color/number_badge_text"
+            android:textAppearance="@style/TextAppearance.CourseApp.CardTitle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/space_12"
+            android:layout_marginEnd="@dimen/space_8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMateriTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Studio"
+                android:textAppearance="@style/TextAppearance.CourseApp.CardTitle" />
+
+            <TextView
+                android:id="@+id/tvMateriDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:lineSpacingExtra="2dp"
+                android:text="Pengenalan lingkungan pengembangan aplikasi Android"
+                android:textAppearance="@style/TextAppearance.CourseApp.Supporting" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMateriArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/action_open_materi"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="@color/secondary_text" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

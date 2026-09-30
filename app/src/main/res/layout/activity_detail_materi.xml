@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Top AppBar / Toolbar with Back Navigation -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/primary"
+        app:title="@string/materi_title"
+        app:titleTextAppearance="@style/TextAppearance.CourseApp.CardTitle"
+        app:titleTextColor="@color/primary_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/dividerDetailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_subtle"
+        app:layout_constraintTop_toBottomOf="@id/topAppBarDetail" />
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/dividerDetailToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/page_padding_horizontal"
+            android:paddingTop="@dimen/page_padding_vertical"
+            android:paddingEnd="@dimen/page_padding_horizontal"
+            android:paddingBottom="@dimen/space_24"
+            android:clipToPadding="false">
+
+            <!-- Module Number Badge -->
+            <TextView
+                android:id="@+id/tvDetailNumberBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_number_badge"
+                android:paddingStart="@dimen/space_12"
+                android:paddingTop="@dimen/space_4"
+                android:paddingEnd="@dimen/space_12"
+                android:paddingBottom="@dimen/space_4"
+                android:text="Modul 01"
+                android:textAppearance="@style/TextAppearance.CourseApp.Label" />
+
+            <!-- Module Title -->
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:text="Judul Materi"
+                android:textAppearance="@style/TextAppearance.CourseApp.ScreenTitle" />
+
+            <!-- Overview Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                style="@style/Widget.CourseApp.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_section_overview"
+                        android:textAppearance="@style/TextAppearance.CourseApp.Label" />
+
+                    <TextView
+                        android:id="@+id/tvDetailOverview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:text="Penjelasan gambaran umum materi."
+                        android:textAppearance="@style/TextAppearance.CourseApp.Body"
+                        android:lineSpacingExtra="5dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Key Concepts Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_24"
+                android:text="@string/detail_section_concepts"
+                android:textAppearance="@style/TextAppearance.CourseApp.SectionTitle" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                style="@style/Widget.CourseApp.Card">
+
+                <LinearLayout
+                    android:id="@+id/layoutConceptsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <TextView
+                        android:id="@+id/tvDetailConcepts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar konsep materi praktikum."
+                        android:textAppearance="@style/TextAppearance.CourseApp.Body"
+                        android:lineSpacingExtra="6dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Practical Implementation Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_24"
+                android:text="@string/detail_section_practice"
+                android:textAppearance="@style/TextAppearance.CourseApp.SectionTitle" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                style="@style/Widget.CourseApp.Card"
+                app:strokeColor="@color/accent_materi_border"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/accent_materi_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <TextView
+                        android:id="@+id/tvDetailPractice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Penerapan materi praktikum."
+                        android:textAppearance="@style/TextAppearance.CourseApp.Body"
+                        android:lineSpacingExtra="5dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Summary Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_24"
+                android:text="@string/detail_section_summary"
+                android:textAppearance="@style/TextAppearance.CourseApp.SectionTitle" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                style="@style/Widget.CourseApp.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <TextView
+                        android:id="@+id/tvDetailSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rangkuman inti materi."
+                        android:textAppearance="@style/TextAppearance.CourseApp.Body"
+                        android:textColor="@color/secondary_text"
+                        android:lineSpacingExtra="5dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Back Button with Custom Style -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDetailBack"
+                style="@style/CourseAppSecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_24"
+                android:layout_marginBottom="@dimen/space_24"
+                android:text="@string/detail_btn_back" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
